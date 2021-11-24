@@ -74,11 +74,7 @@ function Ingresar(){
         dataType : 'json',
         success : function(json) {
             console.log(json);
-                for(i = 0;  i < json.items; i++){}
-                if(json.length === 0){
-                    alert("No hay ningún usuario");
-                }else{
-                if(json[i].id !== null){
+                if(json.id!==null){
                     confirm("Bienvenido");
                     $("#correo").val("");
                     $("#contrasena").val("");
@@ -89,7 +85,6 @@ function Ingresar(){
                     $("#contrasena").val("");
                 }
             }
-    }
     });
 }
 
